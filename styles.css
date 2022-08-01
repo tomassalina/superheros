@@ -79,6 +79,35 @@ body {
   animation-delay: 0.6s;
 }
 
+.navbar {
+  grid-area: nav;
+  background-color: lightpink;
+}
+.navbar__content {
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+
+  transform: translateY(-200px);
+  animation: 0.5s navbar 2s ease-in-out forwards;
+}
+.navbar__content img {
+  width: 50px;
+}
+.navbar__content ul {
+  width: 450px;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.navbar__content ul li a {
+  font-family: var(--font);
+  font-weight: 300;
+  color: var(--red);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 @keyframes loader {
   0% {
     opacity: 1;
@@ -103,5 +132,14 @@ body {
   }
   50% {
     transform: scale(1);
+  }
+}
+
+@keyframes navbar {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
