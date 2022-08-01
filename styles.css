@@ -56,7 +56,7 @@ body {
   justify-content: center;
   background-color: var(--white);
 
-  animation: loader 2s linear forwards;
+  animation: loader 0s linear forwards;
 }
 .loader__ball {
   background-color: lightpink;
@@ -82,11 +82,13 @@ body {
 .navbar {
   grid-area: nav;
   background-color: lightpink;
+  display: flex;
+  align-items: center;
 }
 .navbar__content {
   display: flex;
   align-items: center;
-  padding: 20px 50px;
+  padding: 0 50px;
 
   transform: translateY(-200px);
   animation: 0.5s navbar 2s ease-in-out forwards;
@@ -106,6 +108,30 @@ body {
   color: var(--red);
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.main-content {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding-left: 50px;
+
+  transform: translateY(-800px);
+  animation: 0.5s mainContent 0s ease-in-out forwards;
+}
+.main-content__title {
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+.main-content__title p {
+  font-size: 3.6rem;
+  font-weight: 300;
+  margin: 0 0 -14px 45px;
+}
+.main-content__description {
+  max-width: 450px;
 }
 
 @keyframes loader {
@@ -136,10 +162,13 @@ body {
 }
 
 @keyframes navbar {
-  0% {
-    transform: translateY(-200px);
+  to {
+    transform: translateY(0);
   }
-  100% {
+}
+
+@keyframes mainContent {
+  to {
     transform: translateY(0);
   }
 }
