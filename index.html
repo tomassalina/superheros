@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script async src="./app.js"></script>
   </head>
   <body>
     <div class="page">
@@ -53,19 +54,31 @@
             <li class="footer__item">
               <div class="footer__item--background"></div>
               <button>
-                <img src="./assets/spiderman.png" alt="Spiderman" />
+                <img
+                  class="footer__image"
+                  src="./assets/spiderman.png"
+                  alt="Spiderman"
+                />
               </button>
             </li>
             <li class="footer__item">
               <div class="footer__item--background"></div>
               <button>
-                <img src="./assets/robin.png" alt="Robin" />
+                <img
+                  class="footer__image"
+                  src="./assets/robin.png"
+                  alt="Robin"
+                />
               </button>
             </li>
             <li class="footer__item">
               <div class="footer__item--background"></div>
               <button>
-                <img src="./assets/batman.png" alt="Batman" />
+                <img
+                  class="footer__image"
+                  src="./assets/batman.png"
+                  alt="Batman"
+                />
               </button>
             </li>
           </ul>
@@ -80,7 +93,15 @@
       </section>
 
       <!-- Modal -->
-      <section class="modal"></section>
+      <section class="modal" id="modal">
+        <div class="modal__content">
+          <img
+            class="modal__content--close"
+            id="close-button"
+            src="https://img.icons8.com/ios-glyphs/30/000000/delete-sign.png"
+          />
+        </div>
+      </section>
     </div>
   </body>
 </html>
